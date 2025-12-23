@@ -1,0 +1,25 @@
+body {
+  font-family: Arial;
+  background: #eef2ff;
+  text-align: center;
+}
+
+.form input {
+  padding: 8px;
+  margin: 5px;
+}
+
+button {
+  padding: 8px 12px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+  background: white;
+  margin: 8px;
+  padding: 8px;
+}
