@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Student Management</title>
-  <link rel="stylesheet" href="style.css">
+    <title>House Price Predictor</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
+    <div class="card">
+        <h2>🏠 House Price Prediction</h2>
 
-<h2>Student Management System</h2>
+        <form action="/predict" method="post">
+            <input type="number" name="area" placeholder="Area (sq ft)" required>
+            <input type="number" name="bedrooms" placeholder="Bedrooms" required>
+            <button type="submit">Predict Price</button>
+        </form>
 
-<div class="form">
-  <input type="text" id="name" placeholder="Student Name">
-  <input type="number" id="roll" placeholder="Roll No">
-  <button onclick="addStudent()">Add</button>
-</div>
-
-<ul id="list"></ul>
-
-<script src="script.js"></script>
+        {% if result %}
+        <h3>Estimated Price: {{ result }}</h3>
+        {% endif %}
+    </div>
 </body>
 </html>
